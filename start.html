@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Learn with Sridhar Chimalakonda</title>
+    <style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -webkit-user-select:none;
+    font-family:sans-serif;
+}
+body,html {
+    height:100%;
+}
+body {
+    background-position:center;
+    background-size: 100% 100%;
+}
+#container {
+    text-align: center;
+    height:100%;
+}
+.text-image-container {
+    height:100%;
+}
+.text-image-container:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.only-text, .only-image, .text-with-image, .image-with-text {
+    text-align:center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.only-text, .text-with-image {
+    font-size:2em;
+}
+.image-with-text {
+    margin:0 1em;
+}
+.menu-container {
+    display:inline-block;
+    text-align:left;
+}
+.menu-title {
+    font-size:4em; 
+    font-weight:bold;
+    text-align:center;
+    cursor:default;
+}
+.menu-item {
+    font-size:2em;
+    cursor:pointer;
+    margin:10px;
+}
+.menu-text {
+    display:inline-block;
+}
+.menu-text:hover, .menu-sub-item:hover {
+    text-decoration:underline;
+}
+.menu-bullet {
+    display:inline-block;
+    background-color:darkgreen;
+    font-size:0.7em;
+    height:1.4em;
+    line-height:1.4em;
+    text-align:center;
+    width:1.4em;
+    border-radius:1em;
+    box-shadow:0 0 0 0.15em white inset;
+    margin-right:3px;
+}
+.menu-bullet:hover {
+    background-color:lightgreen;
+    color:black;
+    box-shadow:0 0 0 0.15em black inset;
+}
+.sub-menu-container {
+    margin-left:1.5em;
+}
+.title-letter, .word-letter {
+    display:inline;
+}
+#footer {
+    position:absolute;
+    bottom:0;
+    text-align:center;
+    width:100%;
+}
+#footer > div {
+    display: inline-block;
+    width:19.5%;
+    vertical-align: bottom;
+    height:2em;
+}
+#footer > div > * {
+    max-height: 2em;
+}
+
+.blink {
+    -webkit-animation: colorchange 2s ease-in-out infinite;
+    -moz-animation: colorchange 2s ease-in-out infinite;
+    animation: colorchange 2s ease-in-out infinite;
+}
+
+@-moz-keyframes colorchange {
+  0% {
+    color:inherit;
+  }
+  25% {
+    color:pink;
+  }
+  50% { 
+    color:darkgreen;
+  }
+  75% {
+    color:blue;
+  }
+  100% { 
+    color:auto;
+  }
+}
+@-webkit-keyframes colorchange {
+  0% {
+    color:inherit;
+  }
+  25% {
+    color:pink;
+  }
+  50% { 
+    color:darkgreen;
+  }
+  75% {
+    color:blue;
+  }
+  100% { 
+    color:auto;
+  }
+}@keyframes colorchange {
+  0% {
+    color:inherit;
+  }
+  25% {
+    color:pink;
+  }
+  50% { 
+    color:darkgreen;
+  }
+  75% {
+    color:blue;
+  }
+  100% { 
+    color:auto;
+  }
+}
+    </style>
+</head>
+<body>
+    <script src="jquery.js"></script>
+    <script src="animationQueue.js"></script>
+    <script src="start.js"></script>
+    <div id="container"></div>
+    <div id="footer">
+        <div id="menu"><button>Menu</button></div>
+        <div id="prev"><button>Previous</button></div>
+        <div id="replay"><button>Replay</button></div>
+        <div id="next"><button>Next</button></div>
+        <div></div>
+    </div>
+</body>
+</html>
